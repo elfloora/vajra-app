@@ -2,9 +2,5 @@
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "env": {
-    "ANTHROPIC_API_KEY": "@anthropic-api-key",
-    "OPENAI_API_KEY": "@openai-api-key"
-  }
+  "installCommand": "npm install"
 }
