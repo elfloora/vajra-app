@@ -1,33 +1,33 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk, Space_Mono, IM_Fell_English } from 'next/font/google'
+import { Cinzel, Cormorant_Garamond, Raleway } from 'next/font/google'
 import '@/styles/globals.css'
 
-const displayFont = IM_Fell_English({
-  weight: ['400'],
-  style: ['normal', 'italic'],
+const displayFont = Cinzel({
+  weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-display',
 })
 
-const monoFont = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-mono',
-})
-
-const bodyFont = Space_Grotesk({
+const bodyFont = Cormorant_Garamond({
   weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-body',
 })
 
+const monoFont = Raleway({
+  weight: ['300', '400'],
+  subsets: ['latin'],
+  variable: '--font-mono',
+})
+
 export const metadata: Metadata = {
-  title: 'Lucy Consciousness Protocol',
-  description: 'A structured journey through the architecture of self.',
-  keywords: ['consciousness', 'self-inquiry', 'protocol', 'introspection'],
+  title: 'VAJRA',
+  description: 'İllüzyonu kes. Gerçeği gör. Taahhüt et.',
+  keywords: ['consciousness', 'self-inquiry', 'vajra', 'protocol'],
   openGraph: {
-    title: 'Lucy Consciousness Protocol',
-    description: 'Enter the Protocol.',
+    title: 'VAJRA',
+    description: 'Consciousness Protocol',
     type: 'website',
   },
 }
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="tr" className="dark">
       <body
         className={`${displayFont.variable} ${monoFont.variable} ${bodyFont.variable} font-body bg-void text-white antialiased`}
       >
