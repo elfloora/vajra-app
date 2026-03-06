@@ -7,6 +7,7 @@ export function SessionHeader() {
   const ui = useSessionStore((s) => s.ui)
 
   const modeLabel = ui.ambientMode === 'deep' ? 'Derin Sorgu' : ui.ambientMode === 'emergence' ? 'Uyanış' : 'Aktif Seans'
+  const totalNodes = session?.flow?.nodes ? Object.keys(session.flow.nodes).length : 0
 
   return (
     <header style={{
@@ -23,7 +24,7 @@ export function SessionHeader() {
         ● {modeLabel}
       </span>
       <span style={{ fontFamily: 'Cinzel, serif', fontWeight: 400, fontSize: 11, color: 'rgba(201,168,76,0.35)', letterSpacing: '0.1em' }}>
-        {String(session?.currentNodeIndex ?? 0).padStart(2, '0')} / {String((session?.flow?.nodes ? Object.keys(session.flow.nodes).length : 0)).padStart(2, '0')}
+        {String(totalNodes).padStart(2, '0')}
       </span>
     </header>
   )
