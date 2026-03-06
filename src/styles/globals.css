@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@200;300;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -271,4 +273,33 @@ body {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
   opacity: 0.6;
+}
+
+/* ─── Vajra Font Overrides ───────────────────────────────────────────────────── */
+body {
+  background: #07030f;
+  color: rgba(255, 255, 255, 0.85);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  color: white;
+}
+
+p, span, input, button, a {
+  font-family: 'Raleway', sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* Force visibility on all text */
+* {
+  -webkit-text-fill-color: unset;
 }
